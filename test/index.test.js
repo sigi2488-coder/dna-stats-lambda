@@ -14,7 +14,7 @@ describe("index", () => {
       );
 
       const result = await index.handler({});
-      expect(result.count_mutant_dna).toBe(40);
+      expect(JSON.parse(result.body).count_mutant_dna).toBe(40);
     });
     it("index handler. Error", async () => {
       jest
